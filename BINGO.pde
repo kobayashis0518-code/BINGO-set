@@ -37,17 +37,18 @@ void setup(){
         else if(test[i][k+1] == -1){
           // 次のマスがフリーの場合はさらに次のマスと比較
           if (test[i][k] > test[i][k+2]) {
-            int tmp = test[i][k];        // 値を入れ替え
+            int work = test[i][k];        // 値を入れ替え
             test[i][k] = test[i][k+2];
-            test[i][k+2] = tmp;
+            test[i][k+2] = work;
           }
         } 
         else if (test[i][k] > test[i][k+1]){
-          int tmp = test[i][k];          // 通常の隣接マス同士を比較して入れ替え
+          int work = test[i][k];          // 通常の隣接マス同士を比較して入れ替え
           test[i][k] = test[i][k+1];
-          test[i][k+1] = tmp;
+          test[i][k+1] = work;
         }
       }
     }
   }
 }
+
